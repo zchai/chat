@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +13,17 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        widget.cpp
+        widget.cpp \
+    tcpserver.cpp \
+    tcpclient.cpp
 
-HEADERS  += widget.h
+HEADERS  += widget.h \
+    tcpserver.h \
+    tcpclient.h
 
-FORMS    += widget.ui
+FORMS    += widget.ui \
+    tcpserver.ui \
+    tcpclient.ui
+
+RESOURCES += \
+    image.qrc
